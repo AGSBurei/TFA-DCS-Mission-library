@@ -2,7 +2,7 @@
 -- First define the SET of GROUPs that are defining the EWR network.
 -- Here with prefixes DF CCCP AWACS, DF CCCP EWR.
 DetectionSetGroup = SET_GROUP:New()
-DetectionSetGroup:FilterPrefixes( { "EWR-RED" } )
+DetectionSetGroup:FilterPrefixes( { "EWM" } )
 DetectionSetGroup:FilterStart()
 
 -- Define the DETECTION_AREAS, using the DetectionSetGroup, with a 30km grouping radius.
@@ -27,29 +27,29 @@ A2ADispatcher:SetGciRadius( 100000 )
 A2ADispatcher:SetGciRadius() -- 200000 is the default value.
 
 --Setup CAP RED
-A2ADispatcher:SetSquadron( "CAP-South", AIRBASE.Caucasus.Sukhumi_Babushara, { "CAP-***-MIG29","CAP-***-MIG23","CAP-***-MIG21","CAP-***-MIG25","CAP-***-SU27","CAP-***-SU30","CAP-***-MIG31" }, 2000 )
-A2ADispatcher:SetSquadronTakeoffInAir( "CAP-South" )
-A2ADispatcher:SetSquadronLandingAtEngineShutdown( "CAP-South" )
+A2ADispatcher:SetSquadron( "CAP-MIN", AIRBASE.PersianGulf.Tunb_Island_AFB, { "CAP-F-14","CAP-JF-17","CAP-MIG21","CAP-F-4","CAP-M2KC","CAP-MIG-29","CAP-MF1","CAP-SU30","CAP-SU27","CAP-F5" }, 2000 )
+A2ADispatcher:SetSquadronTakeoffInAir( "CAP-MIN" )
+A2ADispatcher:SetSquadronLandingAtEngineShutdown( "CAP-MIN" )
  
-A2ADispatcher:SetSquadron( "CAP Helo", AIRBASE.Caucasus.Senaki_Kolkhi, { "CAP-***-mi24","CAP-***-ka50" }, 2000 )
-A2ADispatcher:SetSquadronTakeoffInAir( "CAP Helo" )
-A2ADispatcher:SetSquadronLandingAtEngineShutdown( "CAP Helo" )
+A2ADispatcher:SetSquadron( "CAP-ALAIN", AIRBASE.PersianGulf.Fujairah_Intl, { "CAP-F-14","CAP-JF-17","CAP-MIG21","CAP-F-4","CAP-M2KC","CAP-MIG-29","CAP-MF1","CAP-SU30","CAP-SU27","CAP-F5" }, 2000 )
+A2ADispatcher:SetSquadronTakeoffInAir( "CAP-ALAIN" )
+A2ADispatcher:SetSquadronLandingAtEngineShutdown( "CAP-ALAIN" )
  
 -- Set a grouping per 2 airplanes.
-A2ADispatcher:SetSquadronGrouping( "CAP-South", 2 )
-A2ADispatcher:SetSquadronGrouping( "CAP Helo", 2 )
+A2ADispatcher:SetSquadronGrouping( "CAP-MIN", 2 )
+A2ADispatcher:SetSquadronGrouping( "CAP-ALAIN", 2 )
 
 -- CAP Squadron execution.
-CAPZoneEast = ZONE_POLYGON:New( "CAP Zone East", GROUP:FindByName( "CAP Zone East" ) )
-CAPZoneEast = ZONE_POLYGON:New( "CAP Helo", GROUP:FindByName( "CAP Helo" ) )
-A2ADispatcher:SetSquadronCap( "CAP Helo", CAPZoneEast, 300, 300, 220, 220, 220, 220 )
-A2ADispatcher:SetSquadronCapInterval( "CAP Helo", 0, 500, 800, 1 )
-A2ADispatcher:SetSquadronCap( "CAP-South", CAPZoneEast, 9000, 11000, 500, 600, 800, 1200 )
-A2ADispatcher:SetSquadronCapInterval( "CAP-South", 1, 1500, 1800, 1 )
+CAPminhad = ZONE_POLYGON:New( "CAP RED MINHAD", GROUP:FindByName( "CAP RED MINHAD" ) )
+CAPalain = ZONE_POLYGON:New( "CAP RED AL AIN", GROUP:FindByName( "CAP RED AL AIN" ) )
+A2ADispatcher:SetSquadronCap( "CAP-ALAIN", CAPalain, 9000, 11000, 500, 600, 800, 1200 )
+A2ADispatcher:SetSquadronCapInterval( "CAP-ALAIN", 1, 420, 720, 1 )
+A2ADispatcher:SetSquadronCap( "CAP-MIN", CAPminhad, 9000, 11000, 500, 600, 800, 1200 )
+A2ADispatcher:SetSquadronCapInterval( "CAP-MIN", 1, 420, 720, 1 )
  
  ---Fuel
-A2ADispatcher:SetSquadronFuelThreshold( "CAP-South", 0.5 )
-A2ADispatcher:SetSquadronFuelThreshold( "CAP Helo", 0.5 )
+A2ADispatcher:SetSquadronFuelThreshold( "CAP-MIN", 0.5 )
+A2ADispatcher:SetSquadronFuelThreshold( "CAP-ALAIN", 0.5 )
  
  
  --enable tactical status
