@@ -5,7 +5,22 @@ blueIADS:addEarlyWarningRadarsByPrefix('EWB')
 blueIADS:activate()
 blueIADS:addRadioMenu()
 
---RED SAM LIST
+--debug red IADS
+local iadsDebug = blueIADS:getDebugSettings()
+iadsDebug.IADSStatus = true
+iadsDebug.radarWentDark = true
+iadsDebug.contacts = true
+iadsDebug.radarWentLive = true
+iadsDebug.noWorkingCommmandCenter = true
+iadsDebug.samNoConnection = true
+iadsDebug.jammerProbability = true
+iadsDebug.addedEWRadar = true
+iadsDebug.harmDefence = true
+iadsDebug.samSiteStatusEnvOutput = true
+iadsDebug.earlyWarningRadarStatusEnvOutput = true
+iadsDebug.commandCenterStatusEnvOutput = true
+
+--BLUE SAM LIST
 blueIADS:getSAMSitesByPrefix('BLUE-SAM-Patriot-Lima'):setGoLiveRangeInPercent(80):setHARMDetectionChance(100)
 blueIADS:getSAMSitesByPrefix('BLUE-SAM-Hawk'):setGoLiveRangeInPercent(70):setHARMDetectionChance(60)
 blueIADS:getSAMSitesByPrefix('BLUE-SAM-PD'):setGoLiveRangeInPercent(100):setHARMDetectionChance(100)
@@ -17,5 +32,3 @@ blueIADS:getSAMSitesByPrefix('BLUE-SAM-PD'):setGoLiveRangeInPercent(100):setHARM
 
 local commandCenter = StaticObject.getByName("ERO HQ Bunker-LIMA")
 blueIADS:addCommandCenter(commandCenter)
-
-

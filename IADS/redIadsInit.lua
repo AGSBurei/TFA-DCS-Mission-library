@@ -5,6 +5,20 @@ redIADSminhad:addEarlyWarningRadarsByPrefix('EWM')
 redIADSminhad:activate()
 redIADSminhad:addRadioMenu()
 
+--debug red IADS
+local iadsDebug = redIADSminhad:getDebugSettings()
+iadsDebug.IADSStatus = true
+iadsDebug.radarWentDark = true
+iadsDebug.contacts = true
+iadsDebug.radarWentLive = true
+iadsDebug.noWorkingCommmandCenter = true
+iadsDebug.samNoConnection = true
+iadsDebug.jammerProbability = true
+iadsDebug.addedEWRadar = true
+iadsDebug.harmDefence = true
+iadsDebug.samSiteStatusEnvOutput = true
+iadsDebug.earlyWarningRadarStatusEnvOutput = true
+iadsDebug.commandCenterStatusEnvOutput = true
 
 --RED SAM LIST
 redIADSminhad:getSAMSitesByPrefix('SAMM-SA-6'):setGoLiveRangeInPercent(70):setHARMDetectionChance(30)
@@ -22,5 +36,3 @@ redIADSminhad:getSAMSiteByGroupName('SAMM-SA-6-2'):addPointDefence(SA15PD2):setH
 
 local commandCenter = StaticObject.getByName("ERO HQ Bunker-Minhad")
 redIADSminhad:addCommandCenter(commandCenter)
-
-
