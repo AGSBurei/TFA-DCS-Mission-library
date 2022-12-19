@@ -27,11 +27,11 @@ A2ADispatcher:SetGciRadius( 100000 )
 A2ADispatcher:SetGciRadius() -- 200000 is the default value.
 
 --Setup CAP RED
-A2ADispatcher:SetSquadron( "CAP-MIN", AIRBASE.PersianGulf.Tunb_Island_AFB, { "CAP-F-14","CAP-JF-17","CAP-MIG21","CAP-F-4","CAP-M2KC","CAP-MIG-29","CAP-MF1","CAP-SU30","CAP-SU27","CAP-F5" }, 2000 )
+A2ADispatcher:SetSquadron( "CAP-MIN", AIRBASE.PersianGulf.Tunb_Island_AFB, { "CAP-F-14","CAP-JF-17","CAP-MIG21","CAP-F-4","CAP-M2KC","CAP-MIG-29","CAP-MF1","CAP-SU30","CAP-SU27","CAP-F5","CAP-M2K5" }, 2000 )
 A2ADispatcher:SetSquadronTakeoffInAir( "CAP-MIN" )
 A2ADispatcher:SetSquadronLandingAtEngineShutdown( "CAP-MIN" )
  
-A2ADispatcher:SetSquadron( "CAP-ALAIN", AIRBASE.PersianGulf.Fujairah_Intl, { "CAP-F-14","CAP-JF-17","CAP-MIG21","CAP-F-4","CAP-M2KC","CAP-MIG-29","CAP-MF1","CAP-SU30","CAP-SU27","CAP-F5" }, 2000 )
+A2ADispatcher:SetSquadron( "CAP-ALAIN", AIRBASE.PersianGulf.Fujairah_Intl, { "CAP-F-14","CAP-JF-17","CAP-MIG21","CAP-F-4","CAP-M2KC","CAP-MIG-29","CAP-MF1","CAP-SU30","CAP-SU27","CAP-F5","CAP-M2K5" }, 2000 )
 A2ADispatcher:SetSquadronTakeoffInAir( "CAP-ALAIN" )
 A2ADispatcher:SetSquadronLandingAtEngineShutdown( "CAP-ALAIN" )
  
