@@ -1,13 +1,13 @@
 -- setup red IADS
-redIADS = SkynetIADS:create('IADS South')
-redIADS:addSAMSitesByPrefix('SAM')
-redIADS:addEarlyWarningRadarsByPrefix('EW')
-redIADS:activate()
-redIADS:addRadioMenu()
+blueIADS = SkynetIADS:create('IADS BLUE')
+blueIADS:addSAMSitesByPrefix('SAM')
+blueIADS:addEarlyWarningRadarsByPrefix('EW')
+blueIADS:activate()
+blueIADS:addRadioMenu()
 
 
 --debug red IADS
-local iadsDebug = redIADS:getDebugSettings()
+local iadsDebug = blueIADS:getDebugSettings()
 iadsDebug.IADSStatus = true
 iadsDebug.radarWentDark = true
 iadsDebug.contacts = true
@@ -22,17 +22,17 @@ iadsDebug.earlyWarningRadarStatusEnvOutput = true
 iadsDebug.commandCenterStatusEnvOutput = true
 
 --RED SAM LIST
-redIADS:getSAMSitesByPrefix('SAM-SA-2'):setGoLiveRangeInPercent(70):setHARMDetectionChance(50)
-redIADS:getSAMSitesByPrefix('SAM-SA-20A'):setGoLiveRangeInPercent(65):setHARMDetectionChance(90)
-redIADS:getSAMSitesByPrefix('SAM-SA-9'):setGoLiveRangeInPercent(100):setHARMDetectionChance(50)
-redIADS:getSAMSitesByPrefix('SAM-SA-8'):setGoLiveRangeInPercent(100):setHARMDetectionChance(75)
+blueIADS:getSAMSitesByPrefix('SAM-SA-2'):setGoLiveRangeInPercent(70):setHARMDetectionChance(50)
+blueIADS:getSAMSitesByPrefix('SAM-SA-20A'):setGoLiveRangeInPercent(65):setHARMDetectionChance(90)
+blueIADS:getSAMSitesByPrefix('SAM-SA-9'):setGoLiveRangeInPercent(100):setHARMDetectionChance(50)
+blueIADS:getSAMSitesByPrefix('SAM-SA-8'):setGoLiveRangeInPercent(100):setHARMDetectionChance(75)
 
 --declaration of point defence by GroupName
-local SA15PD = redIADS:getSAMSiteByGroupName('SAM-SA-15-PD-SA-20A-RED-SOUTH')
+local SA15PD = blueIADS:getSAMSiteByGroupName('SAM-SA-15-PD-SA-20A-RED-SOUTH')
 --set point defence to SAMSiteGroupe by name
-redIADS:getSAMSiteByGroupName('SAM-SA-20A-RED-SOUTH'):addPointDefence(SA15PD):setHARMDetectionChance(100)
+blueIADS:getSAMSiteByGroupName('SAM-SA-20A-RED-SOUTH'):addPointDefence(SA15PD):setHARMDetectionChance(100)
 
 local commandCenter = StaticObject.getByName("Static ERO HQ Bunker")
-redIADS:addCommandCenter(commandCenter)
+blueIADS:addCommandCenter(commandCenter)
 
 
