@@ -6,19 +6,19 @@ blueIADS:activate()
 blueIADS:addRadioMenu()
 
 --debug blue IADS
-local iadsDebug = blueIADS:getDebugSettings()
-iadsDebug.IADSStatus = true
-iadsDebug.radarWentDark = true
-iadsDebug.contacts = true
-iadsDebug.radarWentLive = true
-iadsDebug.noWorkingCommmandCenter = true
-iadsDebug.samNoConnection = true
-iadsDebug.jammerProbability = true
-iadsDebug.addedEWRadar = true
-iadsDebug.harmDefence = true
-iadsDebug.samSiteStatusEnvOutput = true
-iadsDebug.earlyWarningRadarStatusEnvOutput = true
-iadsDebug.commandCenterStatusEnvOutput = true
+--local iadsDebug = blueIADS:getDebugSettings()
+--iadsDebug.IADSStatus = true
+--iadsDebug.radarWentDark = true
+--iadsDebug.contacts = true
+--iadsDebug.radarWentLive = true
+--iadsDebug.noWorkingCommmandCenter = true
+--iadsDebug.samNoConnection = true
+--iadsDebug.jammerProbability = true
+--iadsDebug.addedEWRadar = true
+--iadsDebug.harmDefence = true
+--iadsDebug.samSiteStatusEnvOutput = true
+--iadsDebug.earlyWarningRadarStatusEnvOutput = true
+--iadsDebug.commandCenterStatusEnvOutput = true
 
 --BLUE SAM LIST
 blueIADS:getSAMSitesByPrefix('BLUE-SAM-Patriot-Lima'):setGoLiveRangeInPercent(80):setHARMDetectionChance(100)

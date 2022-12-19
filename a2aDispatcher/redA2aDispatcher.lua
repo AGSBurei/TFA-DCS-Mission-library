@@ -42,9 +42,9 @@ A2ADispatcher:SetSquadronGrouping( "CAP-ALAIN", 2 )
 -- CAP Squadron execution.
 CAPminhad = ZONE_POLYGON:New( "CAP RED MINHAD", GROUP:FindByName( "CAP RED MINHAD" ) )
 CAPalain = ZONE_POLYGON:New( "CAP RED AL AIN", GROUP:FindByName( "CAP RED AL AIN" ) )
-A2ADispatcher:SetSquadronCap( "CAP-ALAIN", CAPalain, 9000, 11000, 500, 600, 800, 1200 )
+A2ADispatcher:SetSquadronCap( "CAP-ALAIN", CAPalain, 9000, 11000, 400, 500, 800, 1200 )
 A2ADispatcher:SetSquadronCapInterval( "CAP-ALAIN", 1, 420, 720, 1 )
-A2ADispatcher:SetSquadronCap( "CAP-MIN", CAPminhad, 9000, 11000, 500, 600, 800, 1200 )
+A2ADispatcher:SetSquadronCap( "CAP-MIN", CAPminhad, 9000, 11000, 400, 500, 800, 1200 )
 A2ADispatcher:SetSquadronCapInterval( "CAP-MIN", 1, 420, 720, 1 )
  
  ---Fuel
