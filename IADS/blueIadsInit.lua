@@ -1,11 +1,11 @@
--- setup red IADS
+-- setup blue IADS
 blueIADS = SkynetIADS:create('IADS Lima')
 blueIADS:addSAMSitesByPrefix('BLUE-SAM')
 blueIADS:addEarlyWarningRadarsByPrefix('EWB')
 blueIADS:activate()
 blueIADS:addRadioMenu()
 
---debug red IADS
+--debug blue IADS
 local iadsDebug = blueIADS:getDebugSettings()
 iadsDebug.IADSStatus = true
 iadsDebug.radarWentDark = true
