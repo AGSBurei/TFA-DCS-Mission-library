@@ -13,7 +13,7 @@ Detection_red = DETECTION_AREAS:New( DetectionSetGroup_red, 30000 )
 A2ADispatcher_red = AI_A2A_DISPATCHER:New( Detection_red )
   
 -- Set 50km as the radius to engage any target by airborne friendlies.
-A2ADispatcher_red:SetEngageRadius( 50000 )
+A2ADispatcher_red:SetEngageRadius( 70000 )
 
 -- Set 100km as the radius to ground control intercept detected targets from the nearest airbase.
 A2ADispatcher_red:SetGciRadius( 100000 )
@@ -49,5 +49,5 @@ A2ADispatcher_red:SetSquadronFuelThreshold( "CAP-ALAIN", 0.5 )
  
  --enable tactical status
 --A2ADispatcher_red:SetTacticalDisplay(true)
---A2ADispatcher_red:Start()
+A2ADispatcher_red:Start()
 --END MOOSE CODE

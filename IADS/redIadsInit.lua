@@ -3,7 +3,7 @@ redIADSminhad = SkynetIADS:create('IADS Minhad')
 redIADSminhad:addSAMSitesByPrefix('SAMM')
 redIADSminhad:addEarlyWarningRadarsByPrefix('EWM')
 redIADSminhad:activate()
-redIADSminhad:addRadioMenu()
+--redIADSminhad:addRadioMenu()
 
 --debug red IADS
 --local iadsDebug = redIADSminhad:getDebugSettings()
