@@ -48,6 +48,6 @@ A2ADispatcher_red:SetSquadronFuelThreshold( "CAP-ALAIN", 0.5 )
  
  
  --enable tactical status
-A2ADispatcher_red:SetTacticalDisplay(true)
-A2ADispatcher_red:Start()
+--A2ADispatcher_red:SetTacticalDisplay(true)
+--A2ADispatcher_red:Start()
 --END MOOSE CODE

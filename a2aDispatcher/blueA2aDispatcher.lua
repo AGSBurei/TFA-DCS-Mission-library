@@ -48,6 +48,6 @@ A2ADispatcher_blue:SetSquadronFuelThreshold( "CAP-LIWA", 0.5 )
  
  
  --enable tactical status
-A2ADispatcher_blue:SetTacticalDisplay(true)
-A2ADispatcher_blue:Start()
+--A2ADispatcher_blue:SetTacticalDisplay(true)
+--A2ADispatcher_blue:Start()
 --END MOOSE CODE

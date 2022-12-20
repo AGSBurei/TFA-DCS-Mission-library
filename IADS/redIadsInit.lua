@@ -24,7 +24,7 @@ redIADSminhad:addRadioMenu()
 redIADSminhad:getSAMSitesByPrefix('SAMM-SA-6'):setGoLiveRangeInPercent(70):setHARMDetectionChance(30)
 redIADSminhad:getSAMSitesByPrefix('SAMM-SA-15'):setGoLiveRangeInPercent(80):setHARMDetectionChance(100)
 redIADSminhad:getSAMSitesByPrefix('SAMM-SA-8'):setGoLiveRangeInPercent(100):setHARMDetectionChance(50)
-redIADSminhad:getSAMSitesByPrefix('SAMM-SA2'):setGoLiveRangeInPercent(100):setHARMDetectionChance(30)
+redIADSminhad:getSAMSitesByPrefix('SAMM-SA-2'):setGoLiveRangeInPercent(100):setHARMDetectionChance(30)
 
 --declaration of point defence by GroupName
 local SA15PD = redIADSminhad:getSAMSiteByGroupName('SAMM-SA-15PD')
