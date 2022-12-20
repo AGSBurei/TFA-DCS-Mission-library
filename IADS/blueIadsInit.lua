@@ -22,7 +22,7 @@ blueIADS:addRadioMenu()
 
 --BLUE SAM LIST
 blueIADS:getSAMSitesByPrefix('BLUE-SAM-Patriot-Lima'):setGoLiveRangeInPercent(80):setHARMDetectionChance(100)
-blueIADS:getSAMSitesByPrefix('BLUE-SAM-Hawk'):setGoLiveRangeInPercent(70):setHARMDetectionChance(60)
+blueIADS:getSAMSitesByPrefix('BLUE-SAM-Hawk'):setGoLiveRangeInPercent(90):setHARMDetectionChance(60)
 blueIADS:getSAMSitesByPrefix('BLUE-SAM-PD'):setGoLiveRangeInPercent(100):setHARMDetectionChance(100)
 
 --declaration of point defence by GroupName
