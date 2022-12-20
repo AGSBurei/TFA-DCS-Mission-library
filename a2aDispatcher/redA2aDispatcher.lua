@@ -12,7 +12,7 @@ Detection = DETECTION_AREAS:New( DetectionSetGroup, 30000 )
 A2ADispatcher = AI_A2A_DISPATCHER:New( Detection )
   
 -- Set 50km as the radius to engage any target by airborne friendlies.
-A2ADispatcher:SetEngageRadius( 50000 )
+A2ADispatcher:SetEngageRadius( 30000 )
 
 -- Set 100km as the radius to engage any target by airborne friendlies.
 A2ADispatcher:SetEngageRadius() -- 100000 is the default value.
@@ -21,7 +21,7 @@ A2ADispatcher:SetEngageRadius() -- 100000 is the default value.
 A2ADispatcher = AI_A2A_DISPATCHER:New( Detection )
 
 -- Set 100km as the radius to ground control intercept detected targets from the nearest airbase.
-A2ADispatcher:SetGciRadius( 100000 )
+A2ADispatcher:SetGciRadius( 70000 )
 
 -- Set 200km as the radius to ground control intercept.
 A2ADispatcher:SetGciRadius() -- 200000 is the default value.
@@ -41,11 +41,11 @@ A2ADispatcher:SetSquadronGrouping( "CAP-ALAIN", 2 )
 
 -- CAP Squadron execution.
 CAPminhad = ZONE_POLYGON:New( "CAP RED MINHAD", GROUP:FindByName( "CAP RED MINHAD" ) )
+A2ADispatcher:SetSquadronCap( "CAP-MIN", CAPminhad, 9000, 11000, 400, 500, 800, 1200 )
+A2ADispatcher:SetSquadronCapInterval( "CAP-MIN", 1, 420, 720, 1 )
 CAPalain = ZONE_POLYGON:New( "CAP RED AL AIN", GROUP:FindByName( "CAP RED AL AIN" ) )
 A2ADispatcher:SetSquadronCap( "CAP-ALAIN", CAPalain, 9000, 11000, 400, 500, 800, 1200 )
 A2ADispatcher:SetSquadronCapInterval( "CAP-ALAIN", 1, 420, 720, 1 )
-A2ADispatcher:SetSquadronCap( "CAP-MIN", CAPminhad, 9000, 11000, 400, 500, 800, 1200 )
-A2ADispatcher:SetSquadronCapInterval( "CAP-MIN", 1, 420, 720, 1 )
  
  ---Fuel
 A2ADispatcher:SetSquadronFuelThreshold( "CAP-MIN", 0.5 )
