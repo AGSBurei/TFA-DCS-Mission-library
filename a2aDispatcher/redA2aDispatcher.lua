@@ -13,10 +13,10 @@ Detection_red = DETECTION_AREAS:New( DetectionSetGroup_red, 30000 )
 A2ADispatcher_red = AI_A2A_DISPATCHER:New( Detection_red )
   
 -- Set 50km as the radius to engage any target by airborne friendlies.
-A2ADispatcher_red:SetEngageRadius( 70000 )
+A2ADispatcher_red:SetEngageRadius( 75000 )
 
 -- Set 100km as the radius to ground control intercept detected targets from the nearest airbase.
-A2ADispatcher_red:SetGciRadius( 100000 )
+A2ADispatcher_red:SetGciRadius( 83000 )
 
 -- Set 200km as the radius to ground control intercept.
 A2ADispatcher_red:SetGciRadius() -- 200000 is the default value.
