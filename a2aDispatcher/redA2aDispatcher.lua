@@ -11,7 +11,7 @@ Detection_red = DETECTION_AREAS:New( DetectionSetGroup_red, 30000 )
 
 -- Now Setup the A2A dispatcher, and initialize it using the Detection object.
 A2ADispatcher_red = AI_A2A_DISPATCHER:New( Detection_red )
-  
+
 -- Set 50km as the radius to engage any target by airborne friendlies.
 A2ADispatcher_red:SetEngageRadius( 75000 )
 
