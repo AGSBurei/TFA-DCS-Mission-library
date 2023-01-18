@@ -1,12 +1,34 @@
-AWACS = UNIT:FindByName( "EWB-E3" )
+MESSAGE:New( "Start", 25 ):ToAll()
 
-Spawn_AWACS = SPAWN:New( AWACS )
-Spawn_AWACS:SpawnAtAirbase( AIRBASE:FindByName( "AIRBASE.PersianGulf.Liwa_Airbase" ), SPAWN.Takeoff.Cold )
 
-AWACS:HandleEvent( EVENTS.Dead )
+local Event = EVENTHANDLER:New()
 
- function AWACS:OnEventDead( EventData )
-   MessageBLUE = MESSAGE:New( "dead", "Penalty", 25):ToBlue()
-   Spawn_AWACS = SPAWN:New( AWACS )
-   Spawn_AWACS:SpawnAtAirbase( AIRBASE:FindByName( "AIRBASE.PersianGulf.Liwa_Airbase" ), SPAWN.Takeoff.Cold )
- end
+local action = {
+  ["EWB-E3#001-01"] = function (EventData) 
+     AWACS = SPAWN:New( "AWACS" )
+     AWACS:SpawnAtAirbase( AIRBASE:FindByName( AIRBASE.Caucasus.Kutaisi ), SPAWN.Takeoff.Runway )
+  end,
+  ["xxx"] = function (EventData) 
+     env.info("-end-")
+  end,
+
+}
+
+
+Event:HandleEvent( EVENTS.Crash )
+
+function Event:OnEventCrash( EventData )
+
+ UnitA = UNIT:FindByName(EventData.IniUnitName)
+ env.info("----------")
+ env.info(UnitA:GetName() .. "hit")
+ 
+ action[UnitA:GetName()](EventData)
+ env.info("----------")
+ 
+end
+
+
+
+
+ 
