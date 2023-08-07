@@ -5,10 +5,8 @@ DetectionSetGroup_red = SET_GROUP:New()
 DetectionSetGroup_red:FilterPrefixes( { "EWM" } )
 DetectionSetGroup_red:FilterStart()
 
-
 -- Define the DETECTION_AREAS, using the DetectionSetGroup, with a 30km grouping radius.
 Detection_red = DETECTION_AREAS:New( DetectionSetGroup_red, 30000 )
-
 -- Now Setup the A2A dispatcher, and initialize it using the Detection object.
 A2ADispatcher_red = AI_A2A_DISPATCHER:New( Detection_red )
 
