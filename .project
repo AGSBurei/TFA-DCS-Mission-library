@@ -3,6 +3,7 @@
 	<name>DCS_Caucasus_Missions</name>
 	<comment></comment>
 	<projects>
+		<project>Moose_Framework</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
