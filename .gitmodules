@@ -1,3 +1,6 @@
 [submodule "MOOSE"]
 	path = MOOSE
 	url = https://github.com/FlightControl-Master/MOOSE.git
+[submodule "MOOSE_INCLUDE"]
+	path = MOOSE_INCLUDE
+	url = https://github.com/FlightControl-Master/MOOSE_INCLUDE.git
