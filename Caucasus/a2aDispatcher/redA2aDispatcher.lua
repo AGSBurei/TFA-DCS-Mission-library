@@ -29,7 +29,7 @@ A2ADispatcher_red:SetSquadronGrouping( "CAP-MAY", 2 )
 
 -- CAP Squadron execution.
 CAPMaykop = ZONE_POLYGON:New( "CAP RED MAYKOP", GROUP:FindByName( "CAP RED MAYKOP" ) )
-A2ADispatcher_red:SetSquadronCap( "CAP-MAY", CAPMaykop, 9000, 11000, 400, 500, 800, 1200 )
+A2ADispatcher_red:SetSquadronCap( "CAP-MAY", CAPMaykop, 9000, 11000, 400, 500, 800, 1200, "BARO" )
 A2ADispatcher_red:SetSquadronCapInterval( "CAP-MAY", 1, 420, 720, 1 )
  
  ---Fuel
